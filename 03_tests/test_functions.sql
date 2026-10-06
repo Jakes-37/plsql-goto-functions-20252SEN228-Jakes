@@ -1,7 +1,5 @@
--- =====================================================================
 -- test_functions.sql - tests B1-B4. Every line should print PASS.
 -- Run AFTER create_tables.sql and the four function scripts.
--- =====================================================================
 SET SERVEROUTPUT ON;
 
 DECLARE
