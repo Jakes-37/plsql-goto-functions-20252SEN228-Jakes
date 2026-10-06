@@ -1,4 +1,3 @@
--- =====================================================================
 -- A3 - Illegal GOTO and Fix
 -- Run the whole file (F5 in SQL Developer). Block 1 FAILS on purpose;
 -- screenshot the error. Block 2 is the corrected version; screenshot it.
@@ -10,7 +9,6 @@
 --    exception handler.
 --  * You CANNOT jump from an exception handler back into its own block.
 --  * A label must be followed by an executable statement (use NULL;).
--- =====================================================================
 SET SERVEROUTPUT ON;
 
 -- ---------- BLOCK 1: ILLEGAL (jumps INTO an IF block) ----------------
