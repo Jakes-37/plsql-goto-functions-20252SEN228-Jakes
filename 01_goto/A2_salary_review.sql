@@ -1,11 +1,9 @@
--- =====================================================================
 -- A2 - Salary Review (uses GOTO)
 -- Reads one employee's monthly salary and jumps to the matching review
 -- band:  < 100,000 LOW (10% raise) | 100,000-1,000,000 STANDARD (5%)
 --        > 1,000,000 HIGH (2%)     | NULL -> no review possible
 -- Change v_emp_id to test others (5 = NULL salary, 99 = not found).
 -- Expected for emp 1 (450,000): STANDARD band, 5% raise, new = 472500
--- =====================================================================
 SET SERVEROUTPUT ON;
 
 DECLARE
