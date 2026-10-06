@@ -1,4 +1,3 @@
--- =====================================================================
 -- C1 - fn_validate_payroll   (combines GOTO + functions + exceptions)
 -- Input : employee id
 -- Output: 'VALID - ...' with annual salary / tax / years of service,
@@ -7,7 +6,6 @@
 -- On the first failed check we set the message and GOTO lbl_done, so the
 -- remaining checks and the calculations are skipped.
 -- Requires B1-B4 to be created first.
--- =====================================================================
 CREATE OR REPLACE FUNCTION fn_validate_payroll (
   p_emp_id IN NUMBER
 ) RETURN VARCHAR2
