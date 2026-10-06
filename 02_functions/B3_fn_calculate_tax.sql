@@ -1,4 +1,3 @@
--- =====================================================================
 -- B3 - fn_calculate_tax  (monthly tax on a monthly salary)
 -- Progressive (marginal) brackets - a SIMPLIFIED model based on
 -- Rwanda's PAYE bands. If your instructor gave different brackets,
@@ -8,7 +7,6 @@
 --  above 100,000    -> 30% (only on the part above 100,000)
 -- Worked example: 200,000 -> 40,000*20% + 100,000*30% = 8,000 + 30,000 = 38,000
 -- NULL in -> NULL out.  Negative in -> ORA-20003.
--- =====================================================================
 CREATE OR REPLACE FUNCTION fn_calculate_tax (
   p_monthly_salary IN NUMBER
 ) RETURN NUMBER
