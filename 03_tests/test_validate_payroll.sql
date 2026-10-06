@@ -1,0 +1,25 @@
+-- =====================================================================
+-- test_validate_payroll.sql - tests C1
+-- Expected results:
+--  1 Alice    VALID - Annual: 5,400,000, Monthly tax: 113,000.00, Years of service: <n>
+--  2 Eric     VALID
+--  3 Grace    VALID  (tax 4,000.00)
+--  4 Jean     VALID
+--  5 Diane    INVALID: Salary is missing
+--  6 Patrick  INVALID: Salary is negative
+--  7 Sandra   INVALID: Hire date is missing or in the future
+--  8 Kevin    INVALID: No department assigned
+--  999        INVALID: Employee 999 not found
+-- Alice's tax = 8,000 + (450,000-100,000)*30% = 113,000.00
+-- =====================================================================
+SET SERVEROUTPUT ON;
+SET LINESIZE 200
+COLUMN emp_name FORMAT A18
+COLUMN result   FORMAT A90
+
+SELECT emp_id, emp_name, fn_validate_payroll(emp_id) AS result
+FROM   employees
+ORDER  BY emp_id;
+
+-- Employee that does not exist
+SELECT fn_validate_payroll(999) AS result FROM dual;
