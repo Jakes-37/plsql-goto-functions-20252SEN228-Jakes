@@ -1,10 +1,8 @@
--- =====================================================================
 -- A4 - Rewrite WITHOUT GOTO
 -- Part 1 rewrites A1 (number classifier) with IF / ELSIF / ELSE.
 -- Part 2 rewrites A2 (salary review) with a searched CASE expression.
 -- Same outputs as A1 and A2, but the code reads top-to-bottom with no
 -- jumping. This is why structured code is preferred over GOTO.
--- =====================================================================
 SET SERVEROUTPUT ON;
 
 -- ---------- Part 1: A1 without GOTO ----------------------------------
