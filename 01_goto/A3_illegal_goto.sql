@@ -11,7 +11,7 @@
 --  * A label must be followed by an executable statement (use NULL;).
 SET SERVEROUTPUT ON;
 
--- ---------- BLOCK 1: ILLEGAL (jumps INTO an IF block) ----------------
+-- BLOCK 1: ILLEGAL (jumps INTO an IF block)
 -- Expected: PLS-00375: illegal GOTO statement; this GOTO cannot branch
 --           to label 'LBL_INSIDE'
 DECLARE
@@ -26,7 +26,7 @@ BEGIN
 END;
 /
 
--- ---------- BLOCK 2: FIXED (label moved to the outer level) ----------
+-- BLOCK 2: FIXED (label moved to the outer level)
 -- Jumping OUT of the IF to a label in the enclosing block is legal.
 -- Expected output: Reached the label
 DECLARE
